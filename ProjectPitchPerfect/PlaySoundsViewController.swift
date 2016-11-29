@@ -14,6 +14,7 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var vaderButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var sliderValue: UISlider!
     
     var recordedAudioURL: NSURL!
     
@@ -29,9 +30,9 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func playSoundForButton(_ sender: UIButton) {
         switch(ButtonType(rawValue: sender.tag)!) {
         case .vader:
-            playSound(pitch:-1000)
+            playSound(rate: sliderValue.value, pitch:-1000)
         case .chipmunk:
-            playSound(pitch:1000)
+            playSound(rate: sliderValue.value, pitch:1000)
         }
         configureUI(.playing)
     }

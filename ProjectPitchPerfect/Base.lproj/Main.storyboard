@@ -132,6 +132,7 @@
                     </view>
                     <connections>
                         <outlet property="chipmunkButton" destination="HpH-DU-bGy" id="4eN-zk-eJR"/>
+                        <outlet property="sliderValue" destination="JYk-1I-bh9" id="4ch-l6-OOQ"/>
                         <outlet property="stopButton" destination="Xut-dI-WWl" id="fCE-DD-uwS"/>
                         <outlet property="vaderButton" destination="wAB-vx-1nK" id="F0b-9j-cey"/>
                     </connections>
