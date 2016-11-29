@@ -106,7 +106,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="JYk-1I-bh9">
                                                 <rect key="frame" x="112.5" y="0.0" width="118" height="242.5"/>
                                             </slider>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpH-DU-bGy" userLabel="Chipmunk Button">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpH-DU-bGy" userLabel="Chipmunk Button">
                                                 <rect key="frame" x="228.5" y="0.0" width="114.5" height="241.5"/>
                                                 <state key="normal" image="ChipmunkButton"/>
                                                 <connections>
