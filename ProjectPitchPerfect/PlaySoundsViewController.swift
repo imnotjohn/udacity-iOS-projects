@@ -13,6 +13,10 @@ class PlaySoundsViewController: UIViewController {
 
     @IBOutlet weak var vaderButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
+    @IBOutlet weak var snailButton: UIButton!
+    @IBOutlet weak var rabbitButton: UIButton!
+    @IBOutlet weak var echoButton: UIButton!
+    @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var sliderValue: UISlider!
     
@@ -24,7 +28,7 @@ class PlaySoundsViewController: UIViewController {
     var stopTimer:Timer!
     
     enum ButtonType: Int {
-        case vader = 0, chipmunk = 1
+        case vader = 0, chipmunk = 1, snail = 2, rabbit = 3, echo = 4, reverb = 5
     }
     
     override func viewDidLoad() {
@@ -37,6 +41,14 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.notPlaying)
+        
+        vaderButton.imageView?.contentMode = .scaleAspectFit
+        chipmunkButton.imageView?.contentMode = .scaleAspectFit
+        snailButton.imageView?.contentMode = .scaleAspectFit
+        rabbitButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.imageView?.contentMode = .scaleAspectFit
+        stopButton.imageView?.contentMode = .scaleAspectFit
     }
     
     @IBAction func playSoundForButton(_ sender: UIButton) {
@@ -45,6 +57,14 @@ class PlaySoundsViewController: UIViewController {
             playSound(rate: sliderValue.value, pitch:-1000)
         case .chipmunk:
             playSound(rate: sliderValue.value, pitch:1000)
+        case .snail:
+            playSound(rate: 0.5)
+        case .rabbit:
+            playSound(rate: 1.5)
+        case .echo:
+            playSound(rate: sliderValue.value, echo: true)
+        case .reverb:
+            playSound(rate: sliderValue.value, reverb: true)
         }
         configureUI(.playing)
     }
