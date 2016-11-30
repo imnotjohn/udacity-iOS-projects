@@ -26,10 +26,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         recordingButton.imageView?.contentMode = .scaleAspectFit
         stopRecordingButton.imageView?.contentMode = .scaleAspectFit
+        
+        setStackViewLayout()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
     }
     
     func setStackViewLayout() {
