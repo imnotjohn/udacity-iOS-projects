@@ -17,8 +17,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
     
-    //test
-    
+    @IBOutlet weak var ContainerStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +30,22 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func setStackViewLayout() {
+        let orientation = UIApplication.shared.statusBarOrientation
+        
+        if orientation.isPortrait {
+            self.ContainerStackView.axis = .vertical
+        } else {
+            self.ContainerStackView.axis = .horizontal
+        }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animate(alongsideTransition: ({ (context) -> Void in
+            self.setStackViewLayout()
+        }), completion: nil)
     }
     
     @IBAction func recordAudio(_ sender: Any) {

@@ -20,7 +20,6 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var sliderValue: UISlider!
     
-    //test
     @IBOutlet weak var ContainerStackView: UIStackView!
     @IBOutlet weak var voiceStackView: UIStackView!
     @IBOutlet weak var speedStackView: UIStackView!
@@ -60,7 +59,6 @@ class PlaySoundsViewController: UIViewController {
         stopButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
     }
     
-    //test
     func setStackViewLayout() {
         let orientation = UIApplication.shared.statusBarOrientation
         
@@ -73,7 +71,6 @@ class PlaySoundsViewController: UIViewController {
         }
     }
     
-    //test
     func setInnerStackViewsAxis(axisStyle: UILayoutConstraintAxis) {
         self.voiceStackView.axis = axisStyle
         self.speedStackView.axis = axisStyle
@@ -81,7 +78,6 @@ class PlaySoundsViewController: UIViewController {
         self.controlsStackView.axis = axisStyle
     }
     
-    //test
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         coordinator.animate(alongsideTransition: ({ (context) -> Void in
             self.setStackViewLayout()

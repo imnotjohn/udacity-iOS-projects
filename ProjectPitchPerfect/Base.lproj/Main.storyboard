@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="24p-Xl-OFf">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="24p-Xl-OFf" userLabel="Container Stack View">
                                 <rect key="frame" x="16" y="64" width="343" height="523"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DS9-mm-1zO" userLabel="Record">
@@ -58,6 +58,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="PitchPerfect" id="Lmw-Py-RIY"/>
                     <connections>
+                        <outlet property="ContainerStackView" destination="24p-Xl-OFf" id="pqZ-At-zdD"/>
                         <outlet property="labelStatus" destination="cTr-OX-G5m" id="eDe-yV-bp7"/>
                         <outlet property="recordingButton" destination="DS9-mm-1zO" id="S36-u5-gra"/>
                         <outlet property="stopRecordingButton" destination="7ow-ai-Up9" id="ZEt-gO-ybP"/>
