@@ -20,6 +20,13 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var sliderValue: UISlider!
     
+    //test
+    @IBOutlet weak var ContainerStackView: UIStackView!
+    @IBOutlet weak var voiceStackView: UIStackView!
+    @IBOutlet weak var speedStackView: UIStackView!
+    @IBOutlet weak var fxStackView: UIStackView!
+    @IBOutlet weak var controlsStackView: UIStackView!
+    
     var recordedAudioURL: NSURL!
     
     var audioFile:AVAudioFile!
@@ -36,19 +43,49 @@ class PlaySoundsViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupAudio()
+        //test
+        setStackViewLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.notPlaying)
         
-        vaderButton.imageView?.contentMode = .scaleAspectFit
-        chipmunkButton.imageView?.contentMode = .scaleAspectFit
-        snailButton.imageView?.contentMode = .scaleAspectFit
-        rabbitButton.imageView?.contentMode = .scaleAspectFit
-        echoButton.imageView?.contentMode = .scaleAspectFit
-        reverbButton.imageView?.contentMode = .scaleAspectFit
-        stopButton.imageView?.contentMode = .scaleAspectFit
+        vaderButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        chipmunkButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        snailButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        rabbitButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        echoButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        reverbButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        stopButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+    }
+    
+    //test
+    func setStackViewLayout() {
+        let orientation = UIApplication.shared.statusBarOrientation
+        
+        if orientation.isPortrait {
+            self.ContainerStackView.axis = .vertical
+            self.setInnerStackViewsAxis(axisStyle: .horizontal)
+        } else {
+            self.ContainerStackView.axis = .horizontal
+            self.setInnerStackViewsAxis(axisStyle: .vertical)
+        }
+    }
+    
+    //test
+    func setInnerStackViewsAxis(axisStyle: UILayoutConstraintAxis) {
+        self.voiceStackView.axis = axisStyle
+        self.speedStackView.axis = axisStyle
+        self.fxStackView.axis = axisStyle
+        self.controlsStackView.axis = axisStyle
+    }
+    
+    //test
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animate(alongsideTransition: ({ (context) -> Void in
+            self.setStackViewLayout()
+        }), completion: nil)
     }
     
     @IBAction func playSoundForButton(_ sender: UIButton) {

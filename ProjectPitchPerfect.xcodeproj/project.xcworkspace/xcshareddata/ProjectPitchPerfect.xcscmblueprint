@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A9CDADDB6ADB3585333108E2EB67DD9D7306E28B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A9CDADDB6ADB3585333108E2EB67DD9D7306E28B" : 9223372036854775807,
+    "FBF73C026AD019FCE3E5145E07AA0CF4349A09AA" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "53479EF5-D8A5-4306-9FE8-904D6A1D690C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A9CDADDB6ADB3585333108E2EB67DD9D7306E28B" : "ProjectPitchPerfect\/",
+    "FBF73C026AD019FCE3E5145E07AA0CF4349A09AA" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ProjectPitchPerfect",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ProjectPitchPerfect.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/imnotjohn\/udacity-iOS-projects-PitchPerfect.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A9CDADDB6ADB3585333108E2EB67DD9D7306E28B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/imnotjohn\/udacity-iOS-projects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FBF73C026AD019FCE3E5145E07AA0CF4349A09AA"
+    }
+  ]
+}
